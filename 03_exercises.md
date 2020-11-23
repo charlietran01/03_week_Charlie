@@ -354,7 +354,7 @@ Trips %>%
 
 ![](03_exercises_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
-The density plots of rentals throughout a da is similar for both weekend days and the fivve weekdays also have similar density plots.
+The density plots of rentals throughout a da is similar for both weekend days and the five weekdays also have similar density plots.
 
 The variable `client` describes whether the renter is a regular user (level `Registered`) or has not joined the bike-rental organization (`Causal`). The next set of exercises investigate whether these two different categories of users show different rental behavior and how `client` interacts with the patterns you found in the previous exercises. Repeat the graphic from Exercise \@ref(exr:exr-temp) (d) with the following changes:
 
@@ -416,7 +416,7 @@ Trips %>%
 
 ![](03_exercises_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
 
-This graph gives a better visualization of the difference of rentals for specific user throughout the week where the previous did the opposite by showing the differnce of rentals on the time of the week between the types of renters. This graph is better at showing the general time of the week where rentals, regardless of being registered or not, occur the most.
+This graph gives a better visualization of the difference of rentals for specific user throughout the week where the previous did the opposite by showing the difference of rentals on the time of the week between the types of renters. This graph is better at showing the general time of the week where rentals, regardless of being registered or not, occur the most.
 
 ### Spatial patterns
 
@@ -444,7 +444,7 @@ Trips %>%
 
 ![](03_exercises_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
-The plot shows a cluster of station locations where casual users depart from around 38.9, -77.04. This cluster is similar to the cluster in the previous graph while excluding the outlying points at -77.20 longitude.
+The plot shows a cluster of station locations where casual users depart from around 38.9, -77.03. This cluster is similar to the cluster in the previous graph.
 
 ### Spatiotemporal patterns
 
