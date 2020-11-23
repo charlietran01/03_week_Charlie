@@ -408,6 +408,8 @@ Trips %>%
 ## GitHub link
 
   20. Below, provide a link to your GitHub page with this set of Weekly Exercises. Specifically, if the name of the file is 03_exercises.Rmd, provide a link to the 03_exercises.md file, which is the one that will be most readable on GitHub.
+  
+  https://github.com/charlietran01/03_week_Charlie/blob/master/03_exercises.md
 
 ## Challenge problem! 
 
@@ -416,5 +418,20 @@ This problem uses the data from the Tidy Tuesday competition this week, `kids`. 
   21. In this exercise, you are going to try to replicate the graph below, created by Georgios Karamanis. I'm sure you can find the exact code on GitHub somewhere, but **DON'T DO THAT!** You will only be graded for putting an effort into this problem. So, give it a try and see how far you can get without doing too much googling. HINT: use `facet_geo()`. The graphic won't load below since it came from a location on my computer. So, you'll have to reference the original html on the moodle page to see it.
   
 
+```r
+kids %>% 
+  arrange(state, year) %>% 
+  replace(is.na(.), 0) %>% 
+  group_by(state, year, variable) %>% 
+  summarise(total_raw = sum(raw), total_inf_adj = sum(inf_adj), total_inf_adj_perchild = sum(inf_adj_perchild)) %>% 
+  filter(variable == "lib", (!(year %in% (1998:2015)))) %>% 
+  ggplot(aes(y = total_inf_adj_perchild, x = year ))+
+  geom_line()+
+  facet_geo(vars(state))+
+  theme_void()+
+  labs(title = "Change in public spending on libraries in 1997 to 2016", subtitle = "Thousands of dollars spent per 1000 children, adjusted for inflation")
+```
+
+![](03_exercises_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
 
 **DID YOU REMEMBER TO UNCOMMENT THE OPTIONS AT THE TOP?**
